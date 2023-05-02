@@ -91,9 +91,6 @@ GEM
     io-console (0.6.0)
     irb (1.6.4)
       reline (>= 0.3.0)
-    jbuilder (2.11.5)
-      actionview (>= 5.0.0)
-      activesupport (>= 5.0.0)
     jsbundling-rails (1.1.1)
       railties (>= 6.0.0)
     loofah (2.20.0)
@@ -120,6 +117,8 @@ GEM
       net-protocol
     nio4r (2.5.9)
     nokogiri (1.14.3-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
       racc (~> 1.4)
     pg (1.5.3)
     puma (5.6.5)
@@ -218,14 +217,13 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
-  arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   autoprefixer-rails
   bootsnap
   debug
   font-awesome-sass (~> 6.1)
-  jbuilder
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
