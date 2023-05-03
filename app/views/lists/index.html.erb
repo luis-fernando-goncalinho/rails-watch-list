@@ -1,7 +1,19 @@
-<div class="container pt-3">
-  <h1>My lists </h1>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-  <%= link_to 'Create a movie list', new_list_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+ url(https://i0.wp.com/www.acousticpixel.co.uk/wp-content/uploads/2018/11/DSF5839-exit-sockets-gone.jpg?fit=3264%2C2131&ssl=1);">
+    <h1>Save any kind of movie</h1>
+</div>
+
+<div class="container pt-5">
+  <div class="d-flex justify-content-between align-items-center justify-content-center">
+    <h1>My lists </h1>
+    <%= link_to 'Create a movie list', new_list_path, class: "btn btn-primary" %>
+  </div>
+
+  <div class="cards pt-3">
+    <% @lists.each do |list| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+        <%= link_to list.name, list_path(list)%>
+      </div>
+    <% end %>
+  </div>
 </div>

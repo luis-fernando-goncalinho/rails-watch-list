@@ -1,14 +1,25 @@
 
-<div class="container pt-3">
-  <h1><%= @list.name %></h1>
+<%= render 'banner' %>
 
-  <div>
+<div class="container pt-3">
+
+  <div class="cards">
     <% @list.movies.each do |movie| %>
-      <li>
-        <%= movie.title %> - Bookmark: <%= movie.bookmarks.first.comment %> (<%= link_to 'delete',
-        bookmark_path(movie.bookmarks.first),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>)
-      </li>
+
+      <div class="card-trip">
+        <img src=<%= movie.poster_url %> />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= movie.title %></h2>
+            <p><%= movie.overview %></p>
+            <div class="d-flex justify-content-between align-items-center">
+             <p><%=movie.bookmarks.first.comment %></p>
+             <%= link_to 'delete', bookmark_path(movie.bookmarks.first),
+             data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+            </div>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 
