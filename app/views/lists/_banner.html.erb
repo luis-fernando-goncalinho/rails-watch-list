@@ -1,4 +1,4 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
- url(https://i0.wp.com/www.acousticpixel.co.uk/wp-content/uploads/2018/11/DSF5839-exit-sockets-gone.jpg?fit=3264%2C2131&ssl=1);">
+url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
     <h1><%= @list.name %></h1>
 </div>
